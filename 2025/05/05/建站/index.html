@@ -1,0 +1,676 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>使用 Hexo + GitHub Pages + Stellar 主题搭建个人博客 - vmoranv</title>
+
+  
+    <meta name="description" content="引言本文将详细介绍如何使用 Hexo 静态网站生成器，结合 GitHub Pages 服务，并应用精美的 Stellar 主题，从零开始搭建一个属于您自己的个人博客。 Hexo 以其超快的生成速度、对 Markdown 的良好支持以及便捷的一键部署功能而闻名，非常适合用来构建个人博客。GitHub Pages 则提供了免费、稳定、可靠的静态网站托管服务。Stellar 主题则能让您的博客拥有现代化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo + GitHub Pages + Stellar 主题搭建个人博客">
+<meta property="og:url" content="http://example.com/2025/05/05/%E5%BB%BA%E7%AB%99/index.html">
+<meta property="og:site_name" content="vmoranv">
+<meta property="og:description" content="引言本文将详细介绍如何使用 Hexo 静态网站生成器，结合 GitHub Pages 服务，并应用精美的 Stellar 主题，从零开始搭建一个属于您自己的个人博客。 Hexo 以其超快的生成速度、对 Markdown 的良好支持以及便捷的一键部署功能而闻名，非常适合用来构建个人博客。GitHub Pages 则提供了免费、稳定、可靠的静态网站托管服务。Stellar 主题则能让您的博客拥有现代化">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-05T14:50:00.000Z">
+<meta property="article:modified_time" content="2025-05-05T14:56:42.056Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="GitHub Pages">
+<meta property="article:tag" content="Stellar">
+<meta property="article:tag" content="建站">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="Hexo,GitHub Pages,Stellar,建站">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">vmoranv</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/05/05/%E5%BB%BA%E7%AB%99/"><span class="title">使用 Hexo + GitHub Pages + Stellar 主题搭建个人博客</span></a><a class="item title" href="/2025/05/05/hello-world/"><span class="title">Hello World</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BB%BA%E7%AB%99%E6%95%99%E7%A8%8B/">建站教程</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-05-05T14:50:00.000Z">2025-05-05</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-05-05T14:56:42.056Z">2025-05-05</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>使用 Hexo + GitHub Pages + Stellar 主题搭建个人博客</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>本文将详细介绍如何使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> 静态网站生成器，结合 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a> 服务，并应用精美的 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题，从零开始搭建一个属于您自己的个人博客。</p>
+<p>Hexo 以其超快的生成速度、对 Markdown 的良好支持以及便捷的一键部署功能而闻名，非常适合用来构建个人博客。GitHub Pages 则提供了免费、稳定、可靠的静态网站托管服务。Stellar 主题则能让您的博客拥有现代化且高度可定制的外观。</p>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/2303_76953932/article/details/145233223">超详细Hexo+Github Pages搭建个人博客教程 - CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo 官方中文文档</a></li>
+</ul>
+<h2 id="一、前置准备"><a href="#一、前置准备" class="headerlink" title="一、前置准备"></a>一、前置准备</h2><p>在开始搭建之前，请确保您的系统已安装以下软件：</p>
+<ol>
+<li><strong>Git:</strong> 用于代码的版本控制和部署。<ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+<li>安装后，建议配置 Git 的用户信息：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;您的GitHub用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;您的GitHub邮箱&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/2303_76953932/article/details/145233223">使用git拉取github项目-CSDN博客</a></li>
+</ul>
+</li>
+<li><strong>Node.js 和 npm:</strong> Hexo 基于 Node.js，npm 是其包管理器。<ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js — Download Node.js®</a></li>
+<li>安装 Node.js 会同时安装 npm。</li>
+</ul>
+</li>
+<li><strong>GitHub 账号:</strong> 用于创建 GitHub Pages 仓库。<ul>
+<li>注册地址：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></li>
+</ul>
+</li>
+</ol>
+<p>安装完成后，可以在命令行中输入以下命令检查是否安装成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>如果能正确显示版本号，则说明安装成功。</p>
+<h2 id="二、搭建本地-Hexo-博客"><a href="#二、搭建本地-Hexo-博客" class="headerlink" title="二、搭建本地 Hexo 博客"></a>二、搭建本地 Hexo 博客</h2><ol>
+<li><strong>选择一个目录</strong> 用于存放您的博客文件，建议路径中不包含中文和特殊字符。例如 <code>C:\MyBlog</code>。</li>
+<li><strong>打开命令行工具</strong> (如 Git Bash, Windows Terminal 等)，进入您选择的目录。</li>
+<li><strong>安装 Hexo CLI</strong> (命令行工具)：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+这将把 Hexo 命令安装到全局环境中，方便在任何地方使用 <code>hexo</code> 命令。</li>
+<li><strong>初始化 Hexo 项目:</strong> 在您选择的目录下执行以下命令，<code>myblogs</code> 是您的博客项目文件夹名称，可以自定义。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblogs</span><br><span class="line"><span class="built_in">cd</span> myblogs</span><br></pre></td></tr></table></figure>
+这会在 <code>myblogs</code> 文件夹中创建一个新的 Hexo 项目，并自动安装所需的依赖。</li>
+<li><strong>安装项目依赖:</strong> 确保您在项目文件夹 (<code>myblogs</code>) 中执行此命令。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+执行完毕后，您的项目文件夹结构大致如下：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml      # 站点配置文件</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds        # 模板文件夹</span><br><span class="line">├── source           # 博客文章和其他源文件存放处</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes           # 主题文件夹</span><br></pre></td></tr></table></figure></li>
+<li><strong>本地预览:</strong> 在项目文件夹中执行以下命令，启动本地服务器预览博客。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+默认情况下，博客将在 <code>http://localhost:4000</code> 运行。打开浏览器访问该地址，您应该能看到 Hexo 默认主题的博客页面。</li>
+</ol>
+<h2 id="三、创建-GitHub-Pages-仓库"><a href="#三、创建-GitHub-Pages-仓库" class="headerlink" title="三、创建 GitHub Pages 仓库"></a>三、创建 GitHub Pages 仓库</h2><ol>
+<li><strong>登录 GitHub</strong>，创建一个新的仓库 (New repository)。</li>
+<li><strong>仓库命名规范:</strong> 仓库名称必须是 <code>您的GitHub用户名.github.io</code> 的格式。例如，如果您的 GitHub 用户名是 <code>vmoranv</code>，则仓库名称应为 <code>vmoranv.github.io</code>。</li>
+<li><strong>选择 Public</strong> (公开) 仓库。</li>
+<li><strong>勾选 Add a README file</strong> (可选，但建议勾选)。</li>
+<li>点击 <strong>Create repository</strong> 创建仓库。</li>
+<li><strong>配置 GitHub Pages:</strong> 创建仓库后，进入仓库的 <code>Settings</code> -&gt; <code>Pages</code>。<ul>
+<li>在 <code>Source</code> 部分，选择您希望作为 GitHub Pages 来源的分支 (通常是 <code>main</code> 或 <code>master</code>)。</li>
+<li>点击 <code>Save</code>。</li>
+<li>稍等片刻，GitHub Pages 会为您生成一个网站，访问地址通常是 <code>https://您的GitHub用户名.github.io</code>。此时访问该地址，您可能只能看到 README 文件的内容或一个简单的页面。</li>
+</ul>
+</li>
+</ol>
+<h2 id="四、配置-Hexo-部署到-GitHub-Pages"><a href="#四、配置-Hexo-部署到-GitHub-Pages" class="headerlink" title="四、配置 Hexo 部署到 GitHub Pages"></a>四、配置 Hexo 部署到 GitHub Pages</h2><ol>
+<li><p><strong>安装 Git 部署插件:</strong> 在您的 Hexo 项目文件夹 (<code>myblogs</code>) 中执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>这个插件允许 Hexo 通过 Git 将生成的静态文件部署到远程仓库。</p>
+</li>
+<li><p><strong>修改站点配置文件:</strong> 打开 Hexo 项目根目录下的 <code>_config.yml</code> 文件。</p>
+</li>
+<li><p><strong>找到 <code>deploy</code> 部分</strong> (通常在文件末尾)，修改或添加以下配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:您的GitHub用户名/您的GitHub用户名.github.io.git</span> <span class="comment"># 使用 SSH 地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span> <span class="comment"># 替换为您GitHub Pages配置的分支，通常是 main 或 master</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>将 <code>您的GitHub用户名</code> 替换为您的实际 GitHub 用户名。</li>
+<li><code>repo</code> 建议使用 SSH 地址 (<code>git@github.com:...</code>)，这需要您配置 SSH Key。如果您不熟悉 SSH Key，也可以使用 HTTPS 地址 (<code>https://github.com/您的GitHub用户名/您的GitHub用户名.github.io.git</code>)，部署时可能需要输入 GitHub 账号密码。</li>
+<li><code>branch</code> 确保与您在 GitHub Pages 设置中选择的分支一致。</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/2303_76953932/article/details/145233223">超详细Hexo+Github Pages搭建个人博客教程 - CSDN博客</a> 中关于 <code>_config.yml</code> 配置和部署报错的解决方案。</p>
+</li>
+<li><p><strong>部署博客:</strong> 在 Hexo 项目文件夹中依次执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      <span class="comment"># 清理 Hexo 缓存和已生成的静态文件</span></span><br><span class="line">hexo generate   <span class="comment"># 重新生成静态文件到 public 文件夹</span></span><br><span class="line">hexo deploy     <span class="comment"># 将 public 文件夹的内容部署到 GitHub Pages 仓库</span></span><br></pre></td></tr></table></figure>
+<p>如果使用 SSH 地址部署，可能会提示输入 SSH Key 密码。如果部署成功，命令行会显示 <code>Deploy done</code>。<br>稍等片刻（可能需要几分钟），访问您的 GitHub Pages 地址 <code>https://您的GitHub用户名.github.io</code>，您应该能看到部署成功的博客页面。</p>
+</li>
+</ol>
+<h2 id="五、应用-Stellar-主题"><a href="#五、应用-Stellar-主题" class="headerlink" title="五、应用 Stellar 主题"></a>五、应用 Stellar 主题</h2><ol>
+<li><strong>下载 Stellar 主题:</strong> 在 Hexo 项目文件夹中执行以下命令，将 Stellar 主题克隆到 <code>themes</code> 文件夹：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b main https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar</span><br></pre></td></tr></table></figure></li>
+<li><strong>修改站点配置文件:</strong> 打开 Hexo 项目根目录下的 <code>_config.yml</code> 文件。</li>
+<li><strong>找到 <code>theme</code> 配置项</strong>，将其值修改为 <code>stellar</code>：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Themes</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">stellar</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>配置 Stellar 主题:</strong> Stellar 主题有自己的配置文件，位于 <code>themes/stellar/_config.yml</code>。您可以复制此文件到 Hexo 项目根目录下，并重命名为 <code>_config.stellar.yml</code> 进行修改。Hexo 会优先读取项目根目录下的主题配置文件。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在项目根目录执行</span></span><br><span class="line"><span class="built_in">cp</span> themes/stellar/_config.yml _config.stellar.yml</span><br></pre></td></tr></table></figure>
+然后修改项目根目录下的 <code>_config.stellar.yml</code> 文件来配置主题的各种选项，例如导航菜单、侧边栏、社交链接等。<br>详细的配置方法请参考 Stellar 主题的开发者文档：<a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">https://xaoxuu.com/wiki/stellar/</a></li>
+<li><strong>重新生成和部署:</strong> 修改配置后，需要重新生成静态文件并部署才能看到效果：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="六、基本使用：撰写新文章"><a href="#六、基本使用：撰写新文章" class="headerlink" title="六、基本使用：撰写新文章"></a>六、基本使用：撰写新文章</h2><ol>
+<li><strong>创建新文章:</strong> 在 Hexo 项目文件夹中执行以下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;您的文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+这会在 <code>source/_posts</code> 文件夹下创建一个名为 <code>您的文章标题.md</code> 的 Markdown 文件。</li>
+<li><strong>编辑文章:</strong> 打开新创建的 Markdown 文件，您会看到文件顶部有一个 <code>Front-matter</code> 区块，由 <code>---</code> 包围。您可以在这里配置文章的标题、日期、标签、分类等信息。<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 您的文章标题</span><br><span class="line">date: 2023-10-27 10:00:00 # 文章创建日期和时间</span><br><span class="line">tags: # 文章标签，多个标签用逗号或换行分隔</span><br><span class="line"><span class="bullet">  -</span> 标签1</span><br><span class="line"><span class="bullet">  -</span> 标签2</span><br><span class="line">categories: # 文章分类，可以有多级分类</span><br><span class="line"><span class="bullet">  -</span> 分类1</span><br><span class="line"><span class="bullet">  -</span> 子分类</span><br><span class="line">keywords: # 文章关键词</span><br><span class="line"><span class="bullet">  -</span> 关键词1</span><br><span class="line"><span class="bullet">  -</span> 关键词2</span><br><span class="line">description: # 文章摘要，用于首页或列表页展示</span><br><span class="line"><span class="section">cover: # 文章封面图片链接</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 这里开始是文章正文，使用 Markdown 语法编写</span></span><br><span class="line"></span><br><span class="line">这是一段示例文字。</span><br><span class="line"></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 列表项1</span><br><span class="line"><span class="bullet">-</span> 列表项2</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/2303_76953932/article/details/145233223">超详细Hexo+Github Pages搭建个人博客教程 - CSDN博客</a> 中关于 Front-matter 的说明。</li>
+<li><strong>生成和部署:</strong> 文章撰写完成后，执行以下命令生成静态文件并部署到 GitHub Pages：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="七、总结"><a href="#七、总结" class="headerlink" title="七、总结"></a>七、总结</h2><p>通过以上步骤，您已经成功搭建了一个基于 Hexo + GitHub Pages 并使用 Stellar 主题的个人博客。您可以继续探索 Hexo 和 Stellar 主题的更多功能，例如添加评论系统、统计功能、自定义域名等，让您的博客更加完善。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/05/05/hello-world/">Hello World</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="toc-text">一、前置准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0-Hexo-%E5%8D%9A%E5%AE%A2"><span class="toc-text">二、搭建本地 Hexo 博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%9B%E5%BB%BA-GitHub-Pages-%E4%BB%93%E5%BA%93"><span class="toc-text">三、创建 GitHub Pages 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%85%8D%E7%BD%AE-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages"><span class="toc-text">四、配置 Hexo 部署到 GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%BA%94%E7%94%A8-Stellar-%E4%B8%BB%E9%A2%98"><span class="toc-text">五、应用 Stellar 主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%9A%E6%92%B0%E5%86%99%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text">六、基本使用：撰写新文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-text">七、总结</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
