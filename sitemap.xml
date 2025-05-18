@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://614447.xyz/2025/05/11/Python%E4%BB%A3%E7%A0%81%E6%A3%80%E6%9F%A5%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7Ruff/</loc>
+    <loc>https://614447.xyz/2025/05/18/%E6%90%AD%E5%BB%BAGeminiAPI%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1/</loc>
+    
+    <lastmod>2025-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://614447.xyz/2025/05/11/%E4%BD%BF%E7%94%A8Nuitka%E9%85%8D%E5%90%88PyInstaller%E6%89%93%E5%8C%85Python%E7%A8%8B%E5%BA%8F/</loc>
     
     <lastmod>2025-05-11</lastmod>
     
@@ -12,6 +21,15 @@
   
   <url>
     <loc>https://614447.xyz/2025/05/11/Git%E9%A2%84%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7pre-commit%E8%AF%A6%E8%A7%A3/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://614447.xyz/2025/05/11/Python%E4%BB%A3%E7%A0%81%E6%A3%80%E6%9F%A5%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7Ruff/</loc>
     
     <lastmod>2025-05-11</lastmod>
     
@@ -292,7 +310,7 @@
 
   <url>
     <loc>https://614447.xyz/</loc>
-    <lastmod>2025-05-11</lastmod>
+    <lastmod>2025-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
